@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/620f42e9-abb2-4cd8-b4d6-7695ebde0f67/favicon.ico?v=1663855156997"
+    />
+
+    <title>educational-helper</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="https://educational-helper.glitch.me/">Games</a>
+      <a href="https://forms.gle/mXTpjh7jiKsPBXcs9">Suggest new games</a>
+      <a href="https://forms.gle/Ny9CjcgYARUFPHvH6">Submit cookie clicker scores</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Open</button>
+      <!-- this is the start of content -->
+      <br>
+      <img src="https://cdn.glitch.global/620f42e9-abb2-4cd8-b4d6-7695ebde0f67/logo.jpg?v=1663933697889" width="500" height="200">
+      <br>
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for educational games.."
+      />
+
+      <ul id="myUL">
+        <li>
+          <a href="https://xenogames224.github.io/cookieclickerxeno/">Cookie Clicker (v.2.022)</a>
+        </li>
+        <li>
+          <a href="https://castles.cc/">Cubic Castles (also known as castles.cc)</a>
+        </li>
+        <li>
+          <a href="https://eggcombat.com/">Shell Shockers (eggcombat.com)</a>
+        </li>
+        <li>
+          <a href="https://geometry.monster/">Shell Shockers (geometry.monster)</a>
+        </li>
+        <li>
+          <a href="https://orb.farm/">Orb Farm (orb.farm)</a>
+        </li>
+        <li>
+          <a href="https://sandspiel.club/">Sandspiel (sandspiel.club)</a>
+        </li>
+        <li>
+          <a href="https://dan-ball.jp/en/javagame/dust/">Powder Game</a>
+        </li>
+        <li>
+          <a href="http://www.higherlowergame.com/">Higher Lower Game</a>
+        </li>
+        <li>
+          <a href="https://www.simn.me/eldrow/">Eldrow (Reverse Wordle)</a>
+        </li>
+        <li>
+          <a href="https://www.chess.com/">Chess</a>
+        </li>
+        <li>
+          <a href="https://ev.io/">ev.io (DO NOT BUY THE NFTS)</a>
+        </li>
+        <li>
+          <a href="https://armorgames.com/orb-of-creation-game/19209">Orb of Creation</a>
+        </li>
+        <li>
+          <a href="https://armorgames.com/waterworks-game/19010?tag-referral=strategy">Waterworks</a>
+        </li>
+        <li>
+          <a href="https://armorgames.com/progress-knight-game/19095">Progress Knight</a>
+        </li>
+        <li>
+          <a href="https://thatmichaelpark.github.io/fractal-jigsaw-puzzle/fractaljigsaw.html">Fractal Jigsaw Puzzle</a>
+        </li>
+      </ul>
+      <br>
+      <a href="https://forms.gle/mXTpjh7jiKsPBXcs9"
+        >Use this link to suggest new educational games.</a
+      >
+    </div>
+
+    <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
